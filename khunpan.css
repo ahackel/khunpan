@@ -1,0 +1,159 @@
+body {
+	background: #141419;
+
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	margin: 0;
+	font-family: "Helvetica Neue", Sans-Serif;
+	font-weight: bold;
+
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+#container {
+	width: 5em;
+	margin: 0em auto;
+}
+
+#board {
+	background-image: url("img/connect4-board.png");
+	background-size: 1em;
+	position: relative;
+	border: solid white 0.07rem;
+	border-radius: 0.35rem;
+	background: #000;
+	margin: 0 auto;
+}
+
+#board:after{
+	content: '';
+	width: 2rem;
+	height: 0.07rem;
+	background: rgba(0,0,0,0.5);
+	display: block;
+	top: 5rem;
+	left: 1rem;
+	position: absolute;
+}
+
+.block {
+	width: 1em;
+	height: 16em;
+	position: absolute;
+	transition-duration: 0.5s;
+	border-radius: 0.25em;
+	border: 0.07em solid rgba(255,255,255,0.3);
+	box-sizing: border-box;
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+
+#board.solved .block.yellow{
+	top: 3.5rem !important;
+}
+
+.block.red {
+	background: rgb(245, 18, 32);
+}
+
+.block.yellow {
+	background: rgb(244, 181, 62);
+}
+
+.block.blue {
+	background: rgb(71, 57, 244);
+}
+
+.block.green {
+	background: rgb(28, 163, 24);
+}
+
+#menu{
+	position: absolute;
+	width: 4rem;
+	height: 100%;
+	/* background: rgba(0,0,0,0.2); */
+	/* left: 0; */
+	top: 0;
+	color: white;
+	font-size: 0.5rem;
+	text-align: center;
+	margin: 2.2rem 0.5rem;
+}
+
+#menu .btn{
+	display: block;
+	width: 3rem;
+	margin: 0 0.5rem;
+}
+
+#menu .btn:hover{
+	background: #333;
+}
+
+
+.moves {
+	margin-top: 0rem;
+	font-size: 0.5rem;
+	width: 100%;
+	height: 1rem;
+	text-align: center;
+	color: white;
+	padding: 0.2rem;
+	box-sizing: border-box;
+}
+
+#button-bar{
+	width: 5rem;
+	bottom: 0;
+	font-size: 0.22rem;
+	color: white;
+	position: absolute;
+}
+
+.btn{
+	display: inline-block;
+	padding: 0.1rem;
+	text-transform: uppercase;
+	box-sizing: border-box;
+	width: 1rem;
+	text-align: center;
+	border-radius: 0.25rem;
+	float: left;
+}
+.btn.disabled {
+	color: #333;
+}
+
+.btn:hover{
+	background: black;
+}
+.btn.disabled:hover {
+	background: none;
+}
+
+#solving{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,0.5);
+	font-size: 0.5rem;
+	color: white;
+	text-align: center;
+	padding: 3.25rem 0;
+	display: none;
+}
+
+#solving-text{
+	background: #000000;
+}
+
+@media screen and (orientation:portrait) {
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html manifest="app.appcache">
+<head>
+    <title>Khun Pan</title>
+    <script src="lib/jquery-2.1.3.min.js"></script>
+    <!--script src="lib/jquery.mobile-1.4.5.min.js"></script-->
+    <!--script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+    <script>
+        traceur.options.experimental = true;
+    </script-->
+    <script src="lib/fastclick.js"></script>
+    <script src="lib/traceur-runtime.js"></script>
+    <script src="out/js/khunpanApp.js"></script>
+    <link rel='stylesheet' type='text/css' href='khunpan.css' />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+    <div id="container">
+        <div class="moves">0</div>
+        <div id='board'></div>
+        <div id='menu'>
+            <div id="level1" class="btn">Easy</div>
+            <div id="level2" class="btn">Hard</div>
+            <div id="level3" class="btn">Insane</div>
+            <!--div id="level-random" class="btn">Random</div-->
+        </div>
+        <div id="button-bar">
+            <div id="btn-undo" class="btn">Undo</div>
+            <div id="btn-redo" class="btn">Redo</div>
+            <div id="btn-reset" class="btn">Reset</div>
+            <div id="btn-solve" class="btn">Solve</div>
+            <div id="btn-menu" class="btn">Menu</div>
+        </div>
+    </div>
+    <div id="solving">
+        <div id="solving-text">Solving...</div>
+    </div>
+</body>
+</html>
